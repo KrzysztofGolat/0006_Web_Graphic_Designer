@@ -21,14 +21,26 @@ module.exports = function(grunt) {
                 "dist/styles/main.css": ["app/styles/reset.scss", "app/styles/style.scss"]
             }
         }
+    },
+    includes: {
+        files: {
+            src: 'app/*.html',
+            dest: 'dist/',
+            flatten: true,
+            cwd: '.',
+            options: {
+                silent: true,
+            }
+        }
     }
-  });
+    });
 
     // Load the plugin that provides the "uglify" task.
-//    grunt.loadNpmTasks('grunt-contrib-uglify');
+    //    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-includes');
     
     // Default task(s).
 //    grunt.registerTask('default', ['uglify']);
-    grunt.registerTask('przemielstyle', ['sass']);
+    grunt.registerTask('przemielstyle', ['sass', 'includes']);
 };
