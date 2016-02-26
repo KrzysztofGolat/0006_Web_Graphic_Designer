@@ -22,6 +22,7 @@ module.exports = function(grunt) {
             }
         }
     },
+      
     includes: {
         files: {
             src: 'app/*.html',
@@ -32,13 +33,27 @@ module.exports = function(grunt) {
                 silent: true,
             }
         }
-    }
-    });
+    },
+      
+      watch: {
+          scripts: {
+              files: './css/*.css',
+              tasks: ['default'],
+              options: {
+                  spawn:false,
+                  event:['all']
+		      },
+	       },
+      },
+    
+  
+  });
 
     // Load the plugin that provides the "uglify" task.
     //    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-includes');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     // Default task(s).
 //    grunt.registerTask('default', ['uglify']);
