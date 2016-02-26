@@ -36,9 +36,9 @@ module.exports = function(grunt) {
     },
       
       watch: {
-          scripts: {
-              files: './css/*.css',
-              tasks: ['default'],
+          stylesheets: {
+              files: 'app/styles/*.scss',
+              tasks: ['sass'],
               options: {
                   spawn:false,
                   event:['all']
@@ -57,5 +57,6 @@ module.exports = function(grunt) {
     
     // Default task(s).
 //    grunt.registerTask('default', ['uglify']);
-    grunt.registerTask('przemielstyle', ['sass', 'includes']);
+    grunt.registerTask('przemielstyle', ['sass', 'includes', 'watch']);
+    grunt.registerTask('przemiel', ['sass', 'includes', ]);
 };
