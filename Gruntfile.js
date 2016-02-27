@@ -44,7 +44,12 @@ module.exports = function(grunt) {
                   event:['all']
 		      },
 	       },
-      },
+          widoki: {
+              files: 'app/*.html',
+              tasks: ['includes']
+	      }
+      }
+      
     
   
   });
