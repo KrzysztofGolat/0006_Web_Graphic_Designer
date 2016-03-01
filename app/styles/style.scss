@@ -76,4 +76,54 @@ body {
 
 //******************** MENU **********************
 
+.nav {
+    padding: 20px 0;
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
 
+.navbar a {
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+        
+    &:hover {
+        color: $brandcolor !important;
+    }
+} 
+
+.focallogo1 {
+    color: white;
+    font-size: 30px;
+}
+
+.focallogo2 {
+    color: $brandcolor;
+    font-size: 30px;
+}
+
+//#f-focal {
+//    display: inline-block;
+//}
+
+.f-stylish {
+    padding: 5px 12px;
+    margin-right: 3px;
+    font-size: 30px;
+    color: white;
+    background-color: grey;
+}
+
+.navbar-brand {
+//    position: fixed;
+//    top:10px;
+  margin-top: 20px;  
+}
+
+.navbar-inverse {
+    border-radius: 0 !important;
+    border: none;
+}
