@@ -48,10 +48,18 @@ module.exports = function(grunt) {
               files: 'app/*.html',
               tasks: ['includes']
 	      }
-      }
+      },
       
+      copy: {
+          obrazki: {
+            cwd: 'app/img/',
+            src: [ '**' ],
+            dest: 'dist/img',
+            expand: true
+        } 
+    }
     
-  
+
   });
 
     // Load the plugin that provides the "uglify" task.
@@ -59,9 +67,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     
     // Default task(s).
 //    grunt.registerTask('default', ['uglify']);
     grunt.registerTask('przemielstyle', ['sass', 'includes', 'watch']);
-    grunt.registerTask('przemiel', ['sass', 'includes', ]);
+    grunt.registerTask('przemiel', ['sass', 'includes', 'copy' ]);
+
 };
