@@ -3,6 +3,10 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
+var serve = require('gulp-serve');
+var browserSync = require('browser-sync').create();
+
+
 // var paths = require('gulp-path');
 //var rename = require('gulp-rename');
 
@@ -32,14 +36,28 @@ gulp.task('imgs', function() {
 
 gulp.task('watch', function() {
     // gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/styles/**/*.scss', ['sass']);
-    gulp.watch('app/*.html', ['html']);
+    gulp.watch('app/styles/**/*.scss', ['sass', browserSync.reload ]);
+    gulp.watch('app/*.html', ['html', browserSync.reload ]);
 });
 
-gulp.task('build', ['sass','html', 'js', 'imgs']);
+gulp.task('serve', serve({
+    root: ['public', 'build'],
+    port: 6357,
+    middleware: function(req, res) {
+        // custom optional middleware
+    }
+}));
+
+gulp.task('serve1', ['build', 'watch'], function() {
+    browserSync.init({
+        server: {
+            baseDir: 'dist'        }
+    });
+});
 
 gulp.task('default', function() {
     // run tasks here
     // set up watch handlers here
-
 });
+
+gulp.task('build', ['sass','html', 'js', 'imgs']);
