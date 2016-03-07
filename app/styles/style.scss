@@ -5,6 +5,7 @@ $textFont: 'Open Sans', Arial, serif;
 
 $bkpTablet: 992px;
 $bkpMobile: 768px;
+$bkpRetina: 1920px;
 
 @import 'reset';
 
@@ -20,6 +21,10 @@ body {
     background-size: cover;
     height: 100vh;
     color: white;
+    
+    @media screen and (min-width: $bkpRetina) {
+            background-image: url(../img/header_retina.jpg);
+    }
     
     &__title {
         border-top: 2px solid white;
@@ -144,6 +149,15 @@ body {
     border: none;
 }
 
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
 //******************** VALUES **********************
 
 h2 {
@@ -198,23 +212,48 @@ h2 {
     background-image: url(../img/aboutme_person.jpg);
     background-position: left top;
     background-repeat: no-repeat;
-    background-size: 36vw auto;
+    background-size: contain;
     background-color: #f2f2f1;
     
+    @media screen and (min-width: $bkpRetina) {
+        background-image: url(../img/aboutme_person_retina.jpg);
+    }
     
     @media screen and (max-width: $bkpTablet) {
-        background-image: none;
-               
+        background-image: none;      
     }
         
     @media screen and (max-width: $bkpMobile) {
-        background-image: none;
-//        padding-top: 20px;
-       
-     }
+        background-image: none;       
+    }
+    
+    &__person {
+        visibility: hidden;
+        
+        @media screen and (max-width: $bkpTablet) {
+            visibility: visible;
+            right: 0px;
+            display: inline-block;
+            vertical-align: text-top;     
+        }
+        
+        @media screen and (max-width: $bkpMobile) {
+            visibility: visible;
+            right: 0px;
+            display: inline-block;
+            vertical-align: text-top;
+            height: 100px;
+        }
+    }
+    
+
    
-    h2 {
+    &__id {
         color: #566366;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: $headingFont;
+        font-weight: 700;
     }
     
     &__content {
@@ -271,6 +310,10 @@ h2 {
         background-repeat: no-repeat;
         padding-bottom: 50px;
         
+        @media screen and (min-width: $bkpRetina) {
+            background-image: url(../img/aboutme_icon1_retina.jpg);
+        }
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
          }  
@@ -279,22 +322,30 @@ h2 {
     
     &__graphic {
         padding-left: 70px;
-        background-image: url(../img/aboutme_icon1.png);
+        background-image: url(../img/aboutme_icon2.png);
         background-position: left top;
         background-repeat: no-repeat;
         padding-bottom: 50px;
         
+        @media screen and (min-width: $bkpRetina) {
+            background-image: url(../img/aboutme_icon2_retina.jpg);
+        }
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
-         } 
+        } 
     }
     
     &__online {
         padding-left: 70px;
-        background-image: url(../img/aboutme_icon1.png);
+        background-image: url(../img/aboutme_icon3.png);
         background-position: left top;
         background-repeat: no-repeat;
                 
+        @media screen and (min-width: $bkpRetina) {
+            background-image: url(../img/aboutme_icon3_retina.jpg);
+        }
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
         }
@@ -302,13 +353,17 @@ h2 {
     
     &__seo {
         padding-left: 70px;
-        background-image: url(../img/aboutme_icon1.png);
+        background-image: url(../img/aboutme_icon4.png);
         background-position: left top;
         background-repeat: no-repeat;
         
+        @media screen and (min-width: $bkpRetina) {
+            background-image: url(../img/aboutme_icon4_retina.jpg);
+        }
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
-         } 
+        } 
     }
     
     &__inside {
