@@ -1,8 +1,9 @@
 $(document).ready(function() {
-    var stickyNavTop = $('.navbar').offset().top;
 
     var stickyNav = function(){
+        var stickyNavTop = $('.header').height(); // $('.navbar').offset().top;
         var scrollTop = $(window).scrollTop();
+        console.log(stickyNavTop, scrollTop);
 
         if (scrollTop > stickyNavTop) { 
             $('.navbar').addClass('sticky');
@@ -13,7 +14,7 @@ $(document).ready(function() {
  
     stickyNav();
 
-    $(window).scroll(function() {
+    $(window).on('scroll resize', function() {
         stickyNav();
     });
 });
