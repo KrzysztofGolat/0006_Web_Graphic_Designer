@@ -20,7 +20,7 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     
     @media screen and (min-width: $bkpRetina) {
@@ -38,7 +38,7 @@ body {
         font-weight: 700;
         font-family: $headingFont;
         overflow: hidden;
-        
+                
         @media screen and (max-width: $bkpTablet) {
             font-size: 44px;
 //            margin-top: 35vh;
@@ -55,6 +55,7 @@ body {
     
     &__ramka a {
         margin-top: 50px;
+        margin-bottom: 20px;
         border: 2px solid white;
         font-size: 18px;
         padding: 20px 40px;
@@ -315,6 +316,10 @@ h2 {
             background-image: url(../img/aboutme_icon1_retina.jpg);
         }
         
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
          }  
@@ -332,6 +337,10 @@ h2 {
             background-image: url(../img/aboutme_icon2_retina.jpg);
         }
         
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
+        
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
         } 
@@ -346,6 +355,10 @@ h2 {
         @media screen and (min-width: $bkpRetina) {
             background-image: url(../img/aboutme_icon3_retina.jpg);
         }
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
         
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
@@ -362,8 +375,12 @@ h2 {
             background-image: url(../img/aboutme_icon4_retina.jpg);
         }
         
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 0px;
+        } 
+        
         @media screen and (max-width: $bkpMobile) {
-            padding-bottom: 15px;
+            padding-bottom: 0px;
         } 
     }
     
