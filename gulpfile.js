@@ -25,8 +25,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src('app/*.js')
-        .pipe(gulp.dest('dist/js'));
+    return gulp.src('app/scripts/**/*.js')
+        .pipe(gulp.dest('dist/scripts'));
 });
 
 gulp.task('imgs', function() {
@@ -40,15 +40,8 @@ gulp.task('watch', function() {
     gulp.watch('app/*.html', ['html', browserSync.reload ]);
 });
 
-gulp.task('serve', serve({
-    root: ['public', 'build'],
-    port: 6357,
-    middleware: function(req, res) {
-        // custom optional middleware
-    }
-}));
 
-gulp.task('serve1', ['build', 'watch'], function() {
+gulp.task('serve', ['build', 'watch'], function() {
     browserSync.init({
         server: {
             baseDir: 'dist'        }
