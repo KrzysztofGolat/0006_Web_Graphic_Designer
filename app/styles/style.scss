@@ -424,14 +424,21 @@ h2 {
     &__a {
         display: inline-block;
         padding: 20px 18px 20px 18px;
+        color: $brandcolor;
+        text-decoration: none;     
         
     }
     
     &__a:visited {
         color: $brandcolor;
+        text-decoration: none;
     }
     
     &__a:hover {
+        text-decoration: none;
+        color: black;
+    }   
+    &__a:active {
         text-decoration: none;
         color: black;
     }
