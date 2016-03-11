@@ -11,7 +11,7 @@ footer {
         font-weight: 700;
         font-size: 14px;
         color: #41494b;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         display: block;
         text-align: center;
     }
@@ -42,7 +42,4 @@ footer {
         display: inline-block;
         line-height: 100%;
     }
-    
-    
-    
 }

@@ -17,7 +17,7 @@
         padding: 20px 0;  
         margin-top: 40vh;
         display: inline-block;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         font-weight: 700;
         font-family: $headingFont;
         overflow: hidden;
@@ -44,7 +44,7 @@
         font-size: 18px;
         padding: 20px 40px;
         display: inline-block;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         text-decoration: none;
         color: white;
         font-weight: 300;

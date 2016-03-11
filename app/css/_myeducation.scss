@@ -1,19 +1,19 @@
 .education {
         &__inside {
         font-size: 22px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: #566366;
         font-weight: 700;
         padding-bottom: 20px;
     }
         
     &__title {
-        padding-top: 100px;
+        @extend .values__h2;
         padding-bottom: 50px;
     }
     
     &__description1 {
-        padding-bottom: 20px;  
+//        padding-bottom: 20px;  
         color: $medgrey;
         
         strong {
@@ -22,10 +22,7 @@
     }
     
     &__description2 {
-        font-family: $headingFont;
-        font-weight: 400;
-        font-size: 18px;
-        color: $medgrey;
+        @resume__description;
         margin-top: 35px;
         padding-top: 28px;
         border-top: solid 2px lightgrey;
@@ -37,3 +34,10 @@
     background-color: $brandcolor;
     padding: 6px 9px;
     border-radius: 0;
+    display: inline-block;
+    margin: 20px 0 0px;
+}
+
+.CIT {
+    margin-top: 50px;
+}

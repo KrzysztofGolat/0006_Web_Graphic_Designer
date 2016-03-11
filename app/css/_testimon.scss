@@ -18,7 +18,7 @@
         font-weight: 700;
         font-size: 18px;
         color: $medgrey;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         text-align: center;
         padding-bottom: 50px;
     }
@@ -35,7 +35,7 @@
         border: 2px solid $brandcolor;
         background: $brandcolor;
         display: inline-block;
-            }
+    }
     
     &__circle {
         width: 10px;
@@ -43,6 +43,5 @@
         border-radius: 100%;
         border: 2px solid $brandcolor;
         display: inline-block;
-        
     }
 }

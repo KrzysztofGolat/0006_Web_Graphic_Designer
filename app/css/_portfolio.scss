@@ -2,23 +2,15 @@
     padding-bottom: 100px;
     
     h2 {
-        font-family: $headingFont;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 30px;
-        color: #566366;
+        @extend .values__h2;
         padding-top: 100px;
+        padding-bottom: 50px;
         text-align: center;
     }
     
     &__description {
-        font-family: $headingFont;
-        font-weight: 400;
-        font-size: 18px;
-        color: $medgrey;
-        padding-bottom: 50px;
-        padding-top: 50px;  
-        text-align: center;
+        @extent resume__description;
+        padding-top: 50px; 
     }
     
     &__row {

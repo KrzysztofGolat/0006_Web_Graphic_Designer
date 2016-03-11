@@ -3,6 +3,7 @@
     background-color: #f2f2f1;
 
     &__title {
+        @extend .values__h2;
         text-align: center;
         padding-top: 100px;
         padding-bottom: 50px;
@@ -10,12 +11,13 @@
 
     &__button {
         border-radius: 0;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: $brandcolor;
         border-color: $brandcolor;
         font-weight: 700;
         font-size: 18px;
         margin-bottom: 100px;
+        margin-top: 50px;
         background-color: #f2f2f1;
     }
     
@@ -23,8 +25,7 @@
         display: inline-block;
         padding: 20px 18px 20px 18px;
         color: $brandcolor;
-        text-decoration: none;     
-        
+        text-decoration: none;
     }
     
     &__a:visited {
@@ -66,7 +67,6 @@
         width: 58px;
         height: 20px;
         content: "";
-//        left: 47vw;
         left: 50%; 
         margin-left: - 29px;
     }

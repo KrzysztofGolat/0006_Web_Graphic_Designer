@@ -1,16 +1,14 @@
-.nav {
-    padding: 20px 0;
+.nav {    
     font-family: $headingFont;
     font-weight: 700;
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: $text-transform;
+    padding: 20px 0;
 }
 
 .navbar a {
-    font-family: $headingFont;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
+    @extend .nav;
+    padding: 0;
     
     @media screen and (max-width: $bkpTablet) {
         font-size: 10px;
@@ -22,15 +20,18 @@
     }
 } 
 
+
+
 .navbar-header {
     
-    
     @media screen and (max-width: $bkpMobile) {
-        margin-bottom: 18px !important;
+        margin-bottom: 5px !important;
+        margin-left: 5px !important;
     }
 }
 
 .navbar-toggle {
+    
     @media screen and (max-width: $bkpMobile) {
         margin-top: 25px !important;
     }
@@ -51,13 +52,11 @@
     margin-right: 5px;
     font-size: 30px;
     color: white;
-    background-color: grey;
+    background-color: #4b5456;
 }
 
 .navbar-brand {
-//    position: fixed;
-//    top:10px;
-  margin-top: 20px;  
+    margin-top: 36px;  
 }
 
 .navbar-inverse {

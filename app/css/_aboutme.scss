@@ -41,7 +41,7 @@
     &__id {
         color: #566366;
         font-size: 30px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         font-family: $headingFont;
         font-weight: 700;
     }
@@ -56,8 +56,6 @@
         
         
         @media screen and (max-width: $bkpTablet) {
-//            position:fixed;
-//            left: -72px;
             font-size: 16px;
             padding-left: 0px;
             padding-top: 30px;
@@ -65,9 +63,6 @@
         }
         
         @media screen and (max-width: $bkpMobile) {
-//            position:fixed;
-//            left: -72px;
-           // right: 20px;
             font-size: 14px;
             padding-left: 0px;
             padding-top: 20px;
@@ -95,10 +90,10 @@
     
     &__web {
         padding-left: 70px;
-        background-image: url(../img/aboutme_icon1.png);
         background-position: left top;
         background-repeat: no-repeat;
         padding-bottom: 50px;
+        background-image: url(../img/aboutme_icon1.png);
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon1_retina.png);
@@ -116,11 +111,9 @@
     }    
     
     &__graphic {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon2.png);
-        background-position: left top;
-        background-repeat: no-repeat;
-        padding-bottom: 50px;
+        
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon2_retina.png);
@@ -137,11 +130,9 @@
     }
     
     &__online {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon3.png);
-        background-position: left top;
-        background-repeat: no-repeat;
-                
+                       
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon3_retina.png);
             background-size: 56px 45px;
@@ -157,10 +148,9 @@
     }
     
     &__seo {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon4.png);
-        background-position: left top;
-        background-repeat: no-repeat;
+        
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon4_retina.png);
@@ -178,12 +168,12 @@
     
     &__inside {
         font-size: 22px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: #566366;
         font-weight: 700;
         padding-bottom: 30px;
         
-         @media screen and (max-width: $bkpMobile) {
+        @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
         }
     }
