@@ -1,0 +1,73 @@
+.resume {
+    
+    background-color: #f2f2f1;
+
+    &__title {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    &__button {
+        border-radius: 0;
+        text-transform: uppercase;
+        color: $brandcolor;
+        border-color: $brandcolor;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 100px;
+        background-color: #f2f2f1;
+    }
+    
+    &__a {
+        display: inline-block;
+        padding: 20px 18px 20px 18px;
+        color: $brandcolor;
+        text-decoration: none;     
+        
+    }
+    
+    &__a:visited {
+        color: $brandcolor;
+        text-decoration: none;
+    }
+    
+    &__a:hover {
+        text-decoration: none;
+        color: black;
+    }   
+    &__a:active {
+        text-decoration: none;
+        color: black;
+    }
+    
+    &__description {
+        font-family: $headingFont;
+        font-weight: 400;
+        font-size: 18px;
+        color: $medgrey;
+        padding-bottom: 50px;
+        text-align: center;
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 80px;
+        } 
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 80px;
+        } 
+        
+    }
+    
+    &::after {
+        background: url(../img/resume_dziubek.png);
+        display: block;
+        position: absolute;  
+        width: 58px;
+        height: 20px;
+        content: "";
+//        left: 47vw;
+        left: 50%; 
+        margin-left: - 29px;
+    }
+}

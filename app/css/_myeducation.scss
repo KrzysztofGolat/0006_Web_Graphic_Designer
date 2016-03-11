@@ -1,0 +1,39 @@
+.education {
+        &__inside {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #566366;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+        
+    &__title {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    
+    &__description1 {
+        padding-bottom: 20px;  
+        color: $medgrey;
+        
+        strong {
+            font-weight: 700;
+        }
+    }
+    
+    &__description2 {
+        font-family: $headingFont;
+        font-weight: 400;
+        font-size: 18px;
+        color: $medgrey;
+        margin-top: 35px;
+        padding-top: 28px;
+        border-top: solid 2px lightgrey;
+        padding-bottom: 80px;
+        }
+}
+
+.label-primary {
+    background-color: $brandcolor;
+    padding: 6px 9px;
+    border-radius: 0;

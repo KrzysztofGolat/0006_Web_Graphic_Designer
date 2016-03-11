@@ -1,0 +1,75 @@
+.nav {
+    padding: 20px 0;
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    
+    @media screen and (max-width: $bkpTablet) {
+        font-size: 10px;
+        text-align: left;
+    }
+    
+    &:hover {
+        color: $brandcolor !important;
+    }
+} 
+
+.navbar-header {
+    
+    
+    @media screen and (max-width: $bkpMobile) {
+        margin-bottom: 18px !important;
+    }
+}
+
+.navbar-toggle {
+    @media screen and (max-width: $bkpMobile) {
+        margin-top: 25px !important;
+    }
+}
+
+.focallogo1 {
+    color: white;
+    font-size: 30px;
+}
+
+.focallogo2 {
+    color: $brandcolor;
+    font-size: 30px;
+}
+
+.f-stylish {
+    padding: 5px 14px;
+    margin-right: 5px;
+    font-size: 30px;
+    color: white;
+    background-color: grey;
+}
+
+.navbar-brand {
+//    position: fixed;
+//    top:10px;
+  margin-top: 20px;  
+}
+
+.navbar-inverse {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}

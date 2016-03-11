@@ -17,6 +17,9 @@ body {
     line-height: 150%;
 }
 
+
+// ************** HEADER ***********************
+
 .header {
     background-image: url(../img/header.jpg);
     background-position: center top;
@@ -605,17 +608,7 @@ h2 {
         text-align: center;
     }
     
-//    &__image {
-////        max-height: 300px;
-//        max-width: 55vh;
-//        padding: 10px;
-//        display: inline-block;
-////        float: left;
-        
-//    }
-    
     &__row {
-//        text-align: center;
         padding-bottom: 25px;
     }
     

@@ -1,0 +1,48 @@
+footer {
+    background-color: #191f21;
+    padding-bottom: 50px;
+}
+
+.footer {
+    
+    &__copy {
+        padding-top: 50px;
+        font-family: $headingFont;
+        font-weight: 700;
+        font-size: 14px;
+        color: #41494b;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+    }
+    
+    &__circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        border: 2px solid #41494b;
+        background: #41494b;
+        display: inline-block;
+        text-align: center;
+        color: #191f21;
+        
+        &:hover {
+        color: white;
+        }
+    }
+    
+    &__icons {
+        color: #191f21;
+        text-align: center;
+        margin-top: 30px;
+    }    
+    
+    &__icon {
+        margin-top: 8px;
+        display: inline-block;
+        line-height: 100%;
+    }
+    
+    
+    
+}

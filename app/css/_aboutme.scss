@@ -1,0 +1,190 @@
+.aboutme {
+    background-image: url(../img/aboutme_person.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f2f2f1;
+    
+    @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
+        background-image: url(../img/aboutme_person_retina.jpg);
+    }
+    
+    @media screen and (max-width: $bkpTablet) {
+        background-image: none;      
+    }
+        
+    @media screen and (max-width: $bkpMobile) {
+        background-image: none;       
+    }
+    
+    &__person {
+        visibility: hidden;
+        
+        @media screen and (max-width: $bkpTablet) {
+            visibility: visible;
+            right: 0px;
+            display: inline-block;
+            vertical-align: text-top;     
+        }
+        
+        @media screen and (max-width: $bkpMobile) {
+            visibility: visible;
+            right: 0px;
+            display: inline-block;
+            vertical-align: text-top;
+            height: 100px;
+        }
+    }
+    
+
+   
+    &__id {
+        color: #566366;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: $headingFont;
+        font-weight: 700;
+    }
+    
+    &__content {
+        background-color: #f2f2f1;
+        padding-left: 120px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        color: $medgrey; 
+        font-size: 18px;
+        
+        
+        @media screen and (max-width: $bkpTablet) {
+//            position:fixed;
+//            left: -72px;
+            font-size: 16px;
+            padding-left: 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        @media screen and (max-width: $bkpMobile) {
+//            position:fixed;
+//            left: -72px;
+           // right: 20px;
+            font-size: 14px;
+            padding-left: 0px;
+            padding-top: 20px;
+            padding-bottom: 15px;
+        }
+    }
+        
+    &__description {
+        padding-top: 50px;
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-top: 20px;
+            padding-bottom: 15px;
+        }
+    }
+        p {
+            padding-bottom: 50px;
+            
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 15px;
+            padding-top: 20px;
+        }    
+            
+    }
+    
+    &__web {
+        padding-left: 70px;
+        background-image: url(../img/aboutme_icon1.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+        
+        @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
+            background-image: url(../img/aboutme_icon1_retina.png);
+            background-size: 56px 45px;
+        }
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 15px;
+         }  
+        
+    }    
+    
+    &__graphic {
+        padding-left: 70px;
+        background-image: url(../img/aboutme_icon2.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+        
+        @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
+            background-image: url(../img/aboutme_icon2_retina.png);
+            background-size: 56px 45px;
+        }
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 15px;
+        } 
+    }
+    
+    &__online {
+        padding-left: 70px;
+        background-image: url(../img/aboutme_icon3.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+                
+        @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
+            background-image: url(../img/aboutme_icon3_retina.png);
+            background-size: 56px 45px;
+        }
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 20px;
+        } 
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 15px;
+        }
+    }
+    
+    &__seo {
+        padding-left: 70px;
+        background-image: url(../img/aboutme_icon4.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        
+        @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
+            background-image: url(../img/aboutme_icon4_retina.png);
+            background-size: 56px 45px;
+        }
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-bottom: 0px;
+        } 
+        
+        @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 0px;
+        } 
+    }
+    
+    &__inside {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #566366;
+        font-weight: 700;
+        padding-bottom: 30px;
+        
+         @media screen and (max-width: $bkpMobile) {
+            padding-bottom: 15px;
+        }
+    }
+}
