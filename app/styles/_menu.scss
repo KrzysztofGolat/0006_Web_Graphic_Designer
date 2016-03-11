@@ -1,13 +1,12 @@
 .nav {    
+	padding: 20px 0;
+}
+
+.navbar a {
     font-family: $headingFont;
     font-weight: 700;
     font-size: 16px;
     text-transform: $text-transform;
-    padding: 20px 0;
-}
-
-.navbar a {
-    @extend .nav;
     padding: 0;
     
     @media screen and (max-width: $bkpTablet) {
@@ -37,20 +36,24 @@
     }
 }
 
+
+.focallogo1,
+.focallogo2,
+.f-stylish {
+    font-size: 30px;
+}
+
 .focallogo1 {
     color: white;
-    font-size: 30px;
 }
 
 .focallogo2 {
     color: $brandcolor;
-    font-size: 30px;
 }
 
 .f-stylish {
     padding: 5px 14px;
     margin-right: 5px;
-    font-size: 30px;
     color: white;
     background-color: #4b5456;
 }

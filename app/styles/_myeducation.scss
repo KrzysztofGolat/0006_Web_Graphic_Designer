@@ -1,5 +1,12 @@
 .education {
-        &__inside {
+   
+	.container {
+        padding-top: 100px;
+        padding-bottom: 100px; 
+
+	}
+	
+    &__inside {
         font-size: 22px;
         text-transform: $text-transform;
         color: #566366;
@@ -22,12 +29,30 @@
     }
     
     &__description2 {
-        @resume__description;
+//        @extend resume__description;
         margin-top: 35px;
         padding-top: 28px;
         border-top: solid 2px lightgrey;
         padding-bottom: 80px;
+    }
+
+	section + section {
+		margin-top: 50px;
+	}
+	
+	& + .education {
+//		padding-top: 50px; 
+		.container {
+			border-top: 1px solid #ccc;
+		}
+	}
+    
+    &__right {
+        
+        @media screen and (max-width: $bkpTablet) {
+            padding-top: 50px;
         }
+    }
 }
 
 .label-primary {
@@ -38,6 +63,3 @@
     margin: 20px 0 0px;
 }
 
-.CIT {
-    margin-top: 50px;
-}

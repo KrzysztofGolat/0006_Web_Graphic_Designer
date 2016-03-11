@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+    font-family: $headingFont;
+    line-height: 150%;
+}
+
+.ipsum {
+    font-family: $headingFont;
+    font-weight: 400;
+    font-size: 18px;
+    color: $medgrey;
+}
+
+.linia {
+    height: 1px;
+    max-width: 100%;
+    background-color: #ccc;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 0;
+}
