@@ -3,6 +3,7 @@ $medgrey: #919191;
 
 $headingFont: 'Roboto', Arial, serif;
 $textFont: 'Open Sans', Arial, serif;
+$text-transform: uppercase;
 
 $bkpTablet: 992px;
 $bkpMobile: 768px;
@@ -15,6 +16,47 @@ body {
     background-color: white;
     font-family: $headingFont;
     line-height: 150%;
+}
+
+.ipsum {
+    font-family: $headingFont;
+    font-weight: 400;
+    font-size: 18px;
+    color: $medgrey;
+}
+
+.linia {
+    height: 1px;
+    max-width: 100%;
+    background-color: #ccc;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 0;
+}
+
+.margines100px {
+    height: 100px;
+    
+    @media screen and (max-width: $bkpTablet) {
+        height: 50px;
+    }
+        
+    @media screen and (max-width: $bkpMobile) {
+        height: 50px;
+    }
+}
+
+.margines80px {
+    height: 80px;
+    
+    @media screen and (max-width: $bkpTablet) {
+        height: 40px;
+    }
+        
+    @media screen and (max-width: $bkpMobile) {
+        height: 40px;
+    }
 }
 
 
@@ -39,7 +81,7 @@ body {
         padding: 20px 0;  
         margin-top: 40vh;
         display: inline-block;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         font-weight: 700;
         font-family: $headingFont;
         overflow: hidden;
@@ -66,7 +108,7 @@ body {
         font-size: 18px;
         padding: 20px 40px;
         display: inline-block;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         text-decoration: none;
         color: white;
         font-weight: 300;
@@ -89,20 +131,17 @@ body {
 }
 
 //******************** MENU **********************
-
-.nav {
-    padding: 20px 0;
+.nav {    
     font-family: $headingFont;
     font-weight: 700;
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: $text-transform;
+    padding: 20px 0;
 }
 
 .navbar a {
-    font-family: $headingFont;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
+    @extend .nav;
+    padding: 0;
     
     @media screen and (max-width: $bkpTablet) {
         font-size: 10px;
@@ -114,15 +153,18 @@ body {
     }
 } 
 
+
+
 .navbar-header {
     
-    
     @media screen and (max-width: $bkpMobile) {
-        margin-bottom: 18px !important;
+        margin-bottom: 5px !important;
+        margin-left: 5px !important;
     }
 }
 
 .navbar-toggle {
+    
     @media screen and (max-width: $bkpMobile) {
         margin-top: 25px !important;
     }
@@ -143,13 +185,11 @@ body {
     margin-right: 5px;
     font-size: 30px;
     color: white;
-    background-color: grey;
+    background-color: #4b5456;
 }
 
 .navbar-brand {
-//    position: fixed;
-//    top:10px;
-  margin-top: 20px;  
+    margin-top: 36px;  
 }
 
 .navbar-inverse {
@@ -168,22 +208,10 @@ body {
 
 //******************** VALUES **********************
 
-h2 {
-    font-family: $headingFont;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #566366;
-}
-
 .values {
-    font-family: $headingFont;
-    font-weight: 400;
-    font-size: 18px;
-    color: $medgrey;
     margin-top: 100px;
     margin-bottom: 100px;
-    
+        
     @media screen and (max-width: $bkpTablet) {
         margin-top: 70px;
         font-size: 16px;
@@ -196,6 +224,14 @@ h2 {
         margin-bottom: 15px;
      }
     
+    &__h2 {
+        font-family: $headingFont;
+        font-weight: 700;
+        text-transform: $text-transform;
+        font-size: 30px;
+        color: #566366;
+    }       
+    
     &__description {
         margin-top: 50px;  
         
@@ -206,6 +242,7 @@ h2 {
         @media screen and (max-width: $bkpMobile) {
             margin-top: 20px; 
         }
+        
     }
     
 }
@@ -255,7 +292,7 @@ h2 {
     &__id {
         color: #566366;
         font-size: 30px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         font-family: $headingFont;
         font-weight: 700;
     }
@@ -270,8 +307,6 @@ h2 {
         
         
         @media screen and (max-width: $bkpTablet) {
-//            position:fixed;
-//            left: -72px;
             font-size: 16px;
             padding-left: 0px;
             padding-top: 30px;
@@ -279,9 +314,6 @@ h2 {
         }
         
         @media screen and (max-width: $bkpMobile) {
-//            position:fixed;
-//            left: -72px;
-           // right: 20px;
             font-size: 14px;
             padding-left: 0px;
             padding-top: 20px;
@@ -309,10 +341,10 @@ h2 {
     
     &__web {
         padding-left: 70px;
-        background-image: url(../img/aboutme_icon1.png);
         background-position: left top;
         background-repeat: no-repeat;
         padding-bottom: 50px;
+        background-image: url(../img/aboutme_icon1.png);
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon1_retina.png);
@@ -330,11 +362,9 @@ h2 {
     }    
     
     &__graphic {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon2.png);
-        background-position: left top;
-        background-repeat: no-repeat;
-        padding-bottom: 50px;
+        
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon2_retina.png);
@@ -351,11 +381,9 @@ h2 {
     }
     
     &__online {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon3.png);
-        background-position: left top;
-        background-repeat: no-repeat;
-                
+                       
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon3_retina.png);
             background-size: 56px 45px;
@@ -371,10 +399,9 @@ h2 {
     }
     
     &__seo {
-        padding-left: 70px;
+        @extend .aboutme__web;
         background-image: url(../img/aboutme_icon4.png);
-        background-position: left top;
-        background-repeat: no-repeat;
+        
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
             background-image: url(../img/aboutme_icon4_retina.png);
@@ -392,12 +419,12 @@ h2 {
     
     &__inside {
         font-size: 22px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: #566366;
         font-weight: 700;
         padding-bottom: 30px;
         
-         @media screen and (max-width: $bkpMobile) {
+        @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
         }
     }
@@ -411,6 +438,7 @@ h2 {
     background-color: #f2f2f1;
 
     &__title {
+        @extend .values__h2;
         text-align: center;
         padding-top: 100px;
         padding-bottom: 50px;
@@ -418,12 +446,13 @@ h2 {
 
     &__button {
         border-radius: 0;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: $brandcolor;
         border-color: $brandcolor;
         font-weight: 700;
         font-size: 18px;
         margin-bottom: 100px;
+        margin-top: 50px;
         background-color: #f2f2f1;
     }
     
@@ -431,8 +460,7 @@ h2 {
         display: inline-block;
         padding: 20px 18px 20px 18px;
         color: $brandcolor;
-        text-decoration: none;     
-        
+        text-decoration: none;
     }
     
     &__a:visited {
@@ -474,7 +502,6 @@ h2 {
         width: 58px;
         height: 20px;
         content: "";
-//        left: 47vw;
         left: 50%; 
         margin-left: - 29px;
     }
@@ -485,19 +512,19 @@ h2 {
 .education {
         &__inside {
         font-size: 22px;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         color: #566366;
         font-weight: 700;
         padding-bottom: 20px;
     }
         
     &__title {
-        padding-top: 100px;
+        @extend .values__h2;
         padding-bottom: 50px;
     }
     
     &__description1 {
-        padding-bottom: 20px;  
+//        padding-bottom: 20px;  
         color: $medgrey;
         
         strong {
@@ -506,10 +533,7 @@ h2 {
     }
     
     &__description2 {
-        font-family: $headingFont;
-        font-weight: 400;
-        font-size: 18px;
-        color: $medgrey;
+        @resume__description;
         margin-top: 35px;
         padding-top: 28px;
         border-top: solid 2px lightgrey;
@@ -521,15 +545,28 @@ h2 {
     background-color: $brandcolor;
     padding: 6px 9px;
     border-radius: 0;
+    display: inline-block;
+    margin: 20px 0 0px;
+}
+
+.CIT {
+    margin-top: 50px;
 }
 
 //******************** WORK EXPERIENCE ********************
 
 .workexp {
     &__linia {
-        border-top: solid 2px lightgrey;
+        height: 1px;
+        max-width: 100%;
+        background-color: #ccc;
+        display: block;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        border: 0;
     }
 }
+
 
 //**************** TESTIMONIALS ****************
 
@@ -553,7 +590,7 @@ h2 {
         font-weight: 700;
         font-size: 18px;
         color: $medgrey;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         text-align: center;
         padding-bottom: 50px;
     }
@@ -570,7 +607,7 @@ h2 {
         border: 2px solid $brandcolor;
         background: $brandcolor;
         display: inline-block;
-            }
+    }
     
     &__circle {
         width: 10px;
@@ -578,7 +615,6 @@ h2 {
         border-radius: 100%;
         border: 2px solid $brandcolor;
         display: inline-block;
-        
     }
 }
 
@@ -589,23 +625,15 @@ h2 {
     padding-bottom: 100px;
     
     h2 {
-        font-family: $headingFont;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 30px;
-        color: #566366;
+        @extend .values__h2;
         padding-top: 100px;
+        padding-bottom: 50px;
         text-align: center;
     }
     
     &__description {
-        font-family: $headingFont;
-        font-weight: 400;
-        font-size: 18px;
-        color: $medgrey;
-        padding-bottom: 50px;
-        padding-top: 50px;  
-        text-align: center;
+        @extent resume__description;
+        padding-top: 50px; 
     }
     
     &__row {
@@ -629,7 +657,7 @@ footer {
         font-weight: 700;
         font-size: 14px;
         color: #41494b;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         display: block;
         text-align: center;
     }
@@ -660,7 +688,4 @@ footer {
         display: inline-block;
         line-height: 100%;
     }
-    
-    
-    
 }

@@ -8,3 +8,11 @@ $bkpTablet: 992px;
 $bkpMobile: 768px;
 $RetinaPxlRatio: 2;
 $RetinaMinDPI: 192dpi;
+
+@import 'reset';
+
+body {
+    background-color: white;
+    font-family: $headingFont;
+    line-height: 150%;
+}
