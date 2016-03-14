@@ -39,6 +39,12 @@ gulp.task('files', function() {
        .pipe(gulp.dest('dist/files'));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('app/font/**')
+        .pipe(gulp.dest('dist/font'));
+});
+
+
 gulp.task('watch', function() {
     // gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/styles/**/*.scss', ['sass', browserSync.reload ]);
@@ -58,4 +64,4 @@ gulp.task('default', function() {
     // set up watch handlers here
 });
 
-gulp.task('build', ['sass','html', 'js', 'imgs', 'files']);
+gulp.task('build', ['sass','html', 'js', 'imgs', 'files', 'fonts']);
