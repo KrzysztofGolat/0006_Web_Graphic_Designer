@@ -10,51 +10,5 @@ $bkpMobile: 768px;
 $RetinaPxlRatio: 2;
 $RetinaMinDPI: 192dpi;
 
-@import 'reset';
+$imagepath: "../img/";
 
-body {
-    background-color: white;
-    font-family: $headingFont;
-    line-height: 150%;
-}
-
-.ipsum {
-    font-family: $headingFont;
-    font-weight: 400;
-    font-size: 18px;
-    color: $medgrey;
-}
-
-.linia {
-    height: 1px;
-    max-width: 100%;
-    background-color: #ccc;
-    display: block;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border: 0;
-}
-
-.margines100px {
-    height: 100px;
-    
-    @media screen and (max-width: $bkpTablet) {
-        height: 50px;
-    }
-        
-    @media screen and (max-width: $bkpMobile) {
-        height: 50px;
-    }
-}
-
-.margines80px {
-    height: 80px;
-    
-    @media screen and (max-width: $bkpTablet) {
-        height: 40px;
-    }
-        
-    @media screen and (max-width: $bkpMobile) {
-        height: 40px;
-    }
-}

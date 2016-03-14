@@ -1,20 +1,16 @@
 .aboutme {
-    background-image: url(../img/aboutme_person.jpg);
+    background-image: url($imagepath + "aboutme_person.jpg");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #f2f2f1;
     
     @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
-        background-image: url(../img/aboutme_person_retina.jpg);
+        background-image: url($imagepath + "aboutme_person_retina.jpg");
     }
     
     @media screen and (max-width: $bkpTablet) {
         background-image: none;      
-    }
-        
-    @media screen and (max-width: $bkpMobile) {
-        background-image: none;       
     }
     
     &__person {
@@ -28,10 +24,6 @@
         }
         
         @media screen and (max-width: $bkpMobile) {
-            visibility: visible;
-            right: 0px;
-            display: inline-block;
-            vertical-align: text-top;
             height: 100px;
         }
     }
@@ -64,7 +56,6 @@
         
         @media screen and (max-width: $bkpMobile) {
             font-size: 14px;
-            padding-left: 0px;
             padding-top: 20px;
             padding-bottom: 15px;
         }
@@ -78,14 +69,14 @@
             padding-bottom: 15px;
         }
     }
-        p {
-            padding-bottom: 50px;
+	
+    p {
+        padding-bottom: 50px;
             
         @media screen and (max-width: $bkpMobile) {
             padding-bottom: 15px;
             padding-top: 20px;
-        }    
-            
+        }       
     }
     
     &__web {
@@ -93,10 +84,10 @@
         background-position: left top;
         background-repeat: no-repeat;
         padding-bottom: 50px;
-        background-image: url(../img/aboutme_icon1.png);
+        background-image: url($imagepath + "aboutme_icon1.png");
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
-            background-image: url(../img/aboutme_icon1_retina.png);
+            background-image: url($imagepath + "aboutme_icon1_retina.png");
             background-size: 56px 45px;
         }
         
@@ -112,58 +103,32 @@
     
     &__graphic {
         @extend .aboutme__web;
-        background-image: url(../img/aboutme_icon2.png);
+        background-image: url($imagepath + "aboutme_icon2.png");
         
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
-            background-image: url(../img/aboutme_icon2_retina.png);
-            background-size: 56px 45px;
+            background-image: url($imagepath + "aboutme_icon2_retina.png");
         }
         
-        @media screen and (max-width: $bkpTablet) {
-            padding-bottom: 20px;
-        } 
-        
-        @media screen and (max-width: $bkpMobile) {
-            padding-bottom: 15px;
-        } 
     }
     
     &__online {
         @extend .aboutme__web;
-        background-image: url(../img/aboutme_icon3.png);
+        background-image: url($imagepath + "aboutme_icon3.png");
                        
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
-            background-image: url(../img/aboutme_icon3_retina.png);
-            background-size: 56px 45px;
-        }
-        
-        @media screen and (max-width: $bkpTablet) {
-            padding-bottom: 20px;
-        } 
-        
-        @media screen and (max-width: $bkpMobile) {
-            padding-bottom: 15px;
+            background-image: url($imagepath + "aboutme_icon3_retina.png");
         }
     }
     
     &__seo {
         @extend .aboutme__web;
-        background-image: url(../img/aboutme_icon4.png);
+        background-image: url($imagepath + "aboutme_icon4.png");
         
         
         @media (-webkit-min-device-pixel-ratio: $RetinaPxlRatio), (min-resolution: $RetinaMinDPI) {
-            background-image: url(../img/aboutme_icon4_retina.png);
-            background-size: 56px 45px;
+            background-image: url($imagepath + "aboutme_icon4_retina.png");
         }
-        
-        @media screen and (max-width: $bkpTablet) {
-            padding-bottom: 0px;
-        } 
-        
-        @media screen and (max-width: $bkpMobile) {
-            padding-bottom: 0px;
-        } 
     }
     
     &__inside {
