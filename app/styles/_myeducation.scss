@@ -3,13 +3,17 @@
 	.container {
         padding-top: 100px;
         padding-bottom: 100px; 
-
+        
+        @media screen and (max-width: $bkpMobile) {
+          padding-top: 50px; 
+          padding-bottom: 50px; 
+        }
 	}
 	
     &__inside {
         font-size: 22px;
         text-transform: $text-transform;
-        color: #566366;
+        color: $darkgray;
         font-weight: 700;
         padding-bottom: 20px;
     }

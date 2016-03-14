@@ -41,6 +41,12 @@
       "css": "pinterest",
       "code": 59397,
       "src": "typicons"
+    },
+    {
+      "uid": "ec21fe3492bb04d9e29103c319556ed8",
+      "css": "search",
+      "code": 59398,
+      "src": "mfglabs"
     }
   ]
 }

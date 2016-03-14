@@ -229,7 +229,7 @@ body {
         font-weight: 700;
         text-transform: $text-transform;
         font-size: 30px;
-        color: #566366;
+        color: $darkgray;
     }       
     
     &__description {
@@ -290,7 +290,7 @@ body {
 
    
     &__id {
-        color: #566366;
+        color: $darkgray;
         font-size: 30px;
         text-transform: $text-transform;
         font-family: $headingFont;
@@ -420,7 +420,7 @@ body {
     &__inside {
         font-size: 22px;
         text-transform: $text-transform;
-        color: #566366;
+        color: $darkgray;
         font-weight: 700;
         padding-bottom: 30px;
         
@@ -513,7 +513,7 @@ body {
         &__inside {
         font-size: 22px;
         text-transform: $text-transform;
-        color: #566366;
+        color: $darkgray;
         font-weight: 700;
         padding-bottom: 20px;
     }
