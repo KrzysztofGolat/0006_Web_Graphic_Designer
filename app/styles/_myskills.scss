@@ -1,0 +1,119 @@
+.myskills {
+    margin-top: 100px;
+    margin-bottom: 100px;
+   
+	.container {
+//        padding-top: 100px;
+//        padding-bottom: 50px; 
+        
+        @media screen and (max-width: $bkpMobile) {
+          padding-top: 25px; 
+          padding-bottom: 25px; 
+        }
+	}
+       
+
+    &__title {
+        @extend .values__h2;
+        margin-bottom: 50px;
+    }
+    
+    &__button {
+        border-radius: 0;
+        text-transform: $text-transform;
+        color: $brandcolor;
+        border-color: $brandcolor;
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: #f2f2f1;    
+        padding: 0px;
+    }
+    
+    &__a {
+        display: inline-block;
+        padding: 20px 18px;
+        color: $brandcolor;
+        text-decoration: none;
+    }
+    
+    
+    &__inside {
+        font-size: 22px;
+        text-transform: $text-transform;
+        color: $darkgray;
+        font-weight: 700;
+        top: 30px;
+    }
+    
+    &__bar-title {
+        font-size: 22px;
+        text-transform: $text-transform;
+        color: $darkgray;
+        font-weight: 700;
+    }
+    
+    &__space {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    &__bar {
+        background-color: $lightgray;
+    }
+    
+}
+
+.myskills__bar div {
+    background-color: $brandcolor;
+    // width: $bar-photoshop;
+    text-align: right;
+    color: white;
+    font: $headingFont;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 1s;
+    
+    span {
+        padding: 8px;
+        display: inline-block;
+    }
+}
+
+.myskills__bar div[data-percent="100"] {
+    width: 100%;
+}
+.myskills__bar div[data-percent="90"] {
+    width: 90%;
+}
+.myskills__bar div[data-percent="80"] {
+    width: 80%;
+}
+.myskills__bar div[data-percent="70"] {
+    width: 70%;
+}
+.myskills__bar div[data-percent="60"] {
+    width: 60%;
+}
+.myskills__bar div[data-percent="50"] {
+    width: 50%;
+}
+.myskills__bar div[data-percent="40"] {
+    width: 40%;
+}
+.myskills__bar div[data-percent="30"] {
+    width: 30%;
+}
+.myskills__bar div[data-percent="20"] {
+    width: 20%;
+}
+.myskills__bar div[data-percent="10"] {
+    width: 10%;
+}
+.myskills__bar div[data-percent="0"] {
+    width: 0%;
+}
+.myskills__bar.initial div {
+    width: 0 !important;
+}
