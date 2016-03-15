@@ -25,8 +25,8 @@
         border-color: $brandcolor;
         font-weight: 700;
         font-size: 18px;
-        margin-top: 30px;
-        margin-bottom: 30px;
+//        margin-top: 50px;
+        margin-bottom: 50px;
         background-color: #f2f2f1;    
         padding: 0px;
     }
@@ -36,6 +36,21 @@
         padding: 20px 18px;
         color: $brandcolor;
         text-decoration: none;
+    }
+    
+    &__a:visited {
+        color: $brandcolor;
+        text-decoration: none;
+    }
+    
+    &__a:hover {
+        text-decoration: none;
+        color: black;
+    }   
+    
+    &__a:active {
+        text-decoration: none;
+        color: black;
     }
     
     
@@ -62,6 +77,14 @@
     &__bar {
         background-color: $lightgray;
     }
+    
+    p {
+        padding-bottom: 50px;
+    }
+//    
+//    p:last-child {
+//        padding-bottom: 100px;
+//    }
     
 }
 
