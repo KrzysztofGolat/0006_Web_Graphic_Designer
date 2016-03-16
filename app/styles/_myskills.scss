@@ -1,6 +1,11 @@
 .myskills {
     margin-top: 100px;
     margin-bottom: 100px;
+    
+    @media screen and (max-width: $bkpMobile) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
    
 	.container {
 //        padding-top: 100px;
@@ -51,6 +56,11 @@
     &__a:active {
         text-decoration: none;
         color: black;
+    }    
+    
+    &__a:focus {
+        text-decoration: none;
+        color: black;
     }
     
     
@@ -72,6 +82,12 @@
     &__space {
         margin-top: 40px;
         margin-bottom: 20px;
+        
+        @media screen and (max-width: $bkpMobile) {
+              margin-top: 0;
+              margin-bottom: 0;  
+        }
+    
     }
     
     &__bar {
