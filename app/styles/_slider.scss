@@ -19,11 +19,19 @@
 }
 
 .circle1 {
+
     background-image: url($imagepath + "header.jpg");
 }
 .circle2 {
+
     background-image: url($imagepath + "LaFerrari.jpg");
 }
 .circle3 {
+
     background-image: url($imagepath + "lambo.jpg");
+}
+
+.transparent {
+
+    opacity:0;
 }

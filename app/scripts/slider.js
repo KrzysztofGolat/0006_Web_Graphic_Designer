@@ -1,17 +1,19 @@
 $(document).ready(function() {
 
-    var headerClasses = $('.header').attr('class');
+    var $topSlider = $(".header").bgswitcher({
+        images: ["img/header.jpg", "img/LaFerrari.jpg", "img/lambo.jpg"]
+    });
 
     $('.slider1').click(function() {
-        $('.header').removeClass().addClass(headerClasses + ' circle1');
+        $topSlider.bgswitcher("select", 0);
     });
 
     $('.slider2').click(function() {
-        $('.header').removeClass().addClass(headerClasses + ' circle2');
+        $topSlider.bgswitcher("select", 1);
     });
 
     $('.slider3').click(function() {
-        $('.header').removeClass().addClass(headerClasses + ' circle3');
+        $topSlider.bgswitcher("select", 2);
     });
 
 });
