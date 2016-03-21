@@ -22,11 +22,12 @@ $(document).ready(function() {
     });
 
     $('.carousel-control.left').click(function(){
+        var slidesLength = $('.sliderbox__sdot').length;
         var $positionEx = $topSlider.bgswitcher("prev");
         $('.sliderbox__sdot.bgr').removeClass('bgr').prev().addClass('bgr');
         if ($('.sliderbox__sdot.bgr').length == 0) {
             $('.sliderbox__sdot:last').addClass('bgr');
-            $topSlider.bgswitcher("select", 2);
+            $topSlider.bgswitcher("select", slidesLength - 1);
         }
     });
 
